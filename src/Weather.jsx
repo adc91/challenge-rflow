@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 
 // Estilos
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,7 +8,20 @@ import "./styles/Weather.scss";
 // Logo
 import logo from "./assets/img/ow-logo.png";
 
+// Components
+import CityPicker from "./components/CityPicker";
+
+// Resources
+import { cities } from "./resources/Cities";
+
 const Weather = () => {
+  const [city, setCity] = useState(cities[0]);
+  const [inProgress, setProgress] = useState(false);
+
+  const onChange = (cityId) => {
+    setCity(cities[cityId]);
+  };
+
   return (
     <Fragment>
       <div className="container">
@@ -17,7 +30,13 @@ const Weather = () => {
             <div className="col-md-3">
               <img className="logo" src={logo} alt="Powered by Open Weather" />
             </div>
-            <div className="col-md-3"></div>
+            <div className="col-md-3">
+              <CityPicker
+                cities={cities}
+                inProgress={inProgress}
+                onChange={onChange}
+              />
+            </div>
           </div>
         </header>
         <div className="row d-flex justify-content-center">
