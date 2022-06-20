@@ -176,7 +176,22 @@ header {
 }
 
 @media (max-width: 767.98px) {
+    .form-select {
+        margin-top: 30px;
+    }
+
     .padding {
       padding: 1rem;
+    }
+
+    .card {
+        &-weather {
+            .weakly-weather {
+                &-item {
+                  flex: 0 0 42%;
+
+                }
+            }
+        }
     }
 }
