@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect, useCallback } from "react";
 
 // Estilos
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,7 +26,7 @@ const Weather = () => {
   const [city, setCity] = useState(cities[0]);
   const [inProgress, setProgress] = useState(false);
 
-  const fetch = (lat, log) => {
+  const fetch = useCallback((lat, log) => {
     makeSetWorking();
 
     fetchAPIData({
@@ -36,20 +36,24 @@ const Weather = () => {
       setData(response);
       setProgress(false);
     });
-  };
+  }, []);
 
   const onChange = (cityId) => {
-    setCity(cities[cityId]);
     makeSetWorking();
 
     if (parseInt(cityId) !== 5) {
-      fetch(cities[cityId].lat, cities[cityId].log);
+      setCity(cities[cityId]);
     } else {
       getLocation()
         .then((response) => {
           const { coords } = response;
+          const citySelected = cities[cityId];
 
-          fetch(coords.latitude, coords.longitude);
+          setCity({
+            ...citySelected,
+            lat: coords.latitude,
+            log: coords.longitude,
+          });
         })
         .catch((err) => {
           setData({ cod: 500, message: err.message });
@@ -64,8 +68,8 @@ const Weather = () => {
   };
 
   useEffect(() => {
-    fetch(cities[0].lat, cities[0].log);
-  }, []);
+    fetch(city.lat, city.log);
+  }, [fetch, city]);
 
   return (
     <Fragment>
