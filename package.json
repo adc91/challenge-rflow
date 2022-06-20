@@ -1,6 +1,7 @@
 {
   "name": "flow",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@mdi/font": "^6.7.96",
