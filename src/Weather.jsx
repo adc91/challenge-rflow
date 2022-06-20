@@ -9,6 +9,7 @@ import "./styles/Weather.scss";
 import logo from "./assets/img/ow-logo.png";
 
 // Components
+import Cards from "./components/Cards";
 import CityPicker from "./components/CityPicker";
 import LocaleHeader from "./components/LocaleHeader";
 import WeatherCurrent from "./components/WeatherCurrent";
@@ -91,7 +92,9 @@ const Weather = () => {
                 <WeatherCurrent data={data} />
               </div>
               <div className="card-body p-0">
-                <div className="d-flex weakly-weather"></div>
+                <div className="d-flex weakly-weather">
+                  <Cards data={data} />
+                </div>
               </div>
             </div>
           </div>
