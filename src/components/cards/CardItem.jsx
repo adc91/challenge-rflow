@@ -1,6 +1,7 @@
 import React from "react";
 
 import WeatherIcon from "../weather/WeatherIcon";
+
 import { capitalizeFirstLetter } from "../../utils/strings";
 
 const CardItem = ({ temperature, day, weather }) => {
