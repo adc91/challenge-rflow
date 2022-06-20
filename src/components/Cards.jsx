@@ -4,7 +4,7 @@ import CardItem from "./cards/CardItem";
 import CardItemLoad from "./cards/CardItemLoad";
 
 // Arr con la cantidad de cards 'loading' a mostrar
-const itemsLoad = [1, 2, 3, 4, 5];
+const itemsLoad = [1, 2, 3, 4];
 
 const Cards = ({ data }) => {
   let { daily, cod } = data;
