@@ -13,7 +13,14 @@ const Cards = ({ data }) => {
 
   return daily
     ? daily.map((value, key) => {
-        return <CardItem key={key} day={key} temperature={value.temp} />;
+        return (
+          <CardItem
+            key={key}
+            day={key}
+            temperature={value.temp}
+            weather={value.weather}
+          />
+        );
       })
     : cod // Puntero para evaluación de error de API
     ? null

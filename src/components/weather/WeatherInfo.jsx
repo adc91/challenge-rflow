@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 
+import WeatherIcon from "./WeatherIcon";
+
 const WeatherInfo = ({ current }) => {
   return (
     <Fragment>
@@ -8,15 +10,18 @@ const WeatherInfo = ({ current }) => {
         <span className="symbol">&deg;</span>C
       </h4>
       {current ? (
-        <p>
-          <span className="text-capitalize">
-            {current.weather[0].description}
-          </span>
-          <br />
-          Humedad del {current.humidity}%
-          <br />
-          Presión atmosférica de {current.pressure}hPa
-        </p>
+        <Fragment>
+          <WeatherIcon {...current.weather[0]} />
+          <p>
+            <span className="text-capitalize">
+              {current.weather[0].description}
+            </span>
+            <br />
+            Humedad del {current.humidity}%
+            <br />
+            Presión atmosférica de {current.pressure}hPa
+          </p>
+        </Fragment>
       ) : (
         <p>Obteniendo información...</p>
       )}

@@ -1,14 +1,22 @@
 import React from "react";
 
-const CardItem = ({ temperature, day }) => {
+import WeatherIcon from "../weather/WeatherIcon";
+import { capitalizeFirstLetter } from "../../utils/strings";
+
+const CardItem = ({ temperature, day, weather }) => {
   return (
     <div className="weakly-weather-item">
       <p className="mb-0 text-capitalize">
         <MakeDay day={day} />
       </p>
-      <i className={`mdi mdi-weather-cloudy`}></i>
+      <hr />
       <p className="mb-0">Mín: {Math.round(temperature.min)}&deg;</p>
       <p className="mb-0">Máx: {Math.round(temperature.max)}&deg;</p>
+      <hr />
+      <p className="mb-0">
+        <WeatherIcon {...weather[0]} />
+      </p>
+      <p className="mb-0">{capitalizeFirstLetter(weather[0].description)}</p>
     </div>
   );
 };
