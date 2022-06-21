@@ -34,5 +34,5 @@ export const cities = [
     lat: 38.8932,
     log: -77.0101,
   },
-  { id: 5, city: "Mi Ubicación", country: "", lat: null, log: null },
+  { id: 5, city: "Mi Ubicación", country: null, lat: null, log: null },
 ];

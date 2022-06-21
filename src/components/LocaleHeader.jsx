@@ -1,8 +1,12 @@
 import React from "react";
 
+import { joinValuesWidthSeparator } from "../utils/strings";
+
 const date = new Date();
 
 const LocaleHeader = ({ city }) => {
+  const locale = joinValuesWidthSeparator(", ", city.city, city.country);
+
   return (
     <div className="weather-date-location">
       <h3>{date.toLocaleDateString("es-ES", { weekday: "long" })}</h3>
@@ -11,8 +15,7 @@ const LocaleHeader = ({ city }) => {
         <span>{date.toLocaleDateString("es-Es", { month: "long" })}</span>,{" "}
         {date.getFullYear()}
         <br />
-        {city.city}
-        {city.country.length > 0 && `, ${city.country}`}
+        {locale}
       </p>
     </div>
   );
