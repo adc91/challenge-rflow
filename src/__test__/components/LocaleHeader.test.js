@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 
 import CityPicker from "../../components/CityPicker";
 import LocaleHeader from "../../components/LocaleHeader";
-import { joinValuesWidthSeparator } from "../../utils/strings";
+import { joinValuesWithSeparator } from "../../utils/strings";
 import { cities } from "../../resources/Cities";
 
 const onChange = () => {};
@@ -15,7 +15,7 @@ describe("<LocaleHeader />", () => {
     const selected = "1";
     const citySelected = cities[parseInt(selected) - 1];
 
-    let cityLabel = joinValuesWidthSeparator(
+    let cityLabel = joinValuesWithSeparator(
       ", ",
       citySelected.city,
       citySelected.country

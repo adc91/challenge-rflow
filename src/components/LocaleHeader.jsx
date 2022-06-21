@@ -1,11 +1,11 @@
 import React from "react";
 
-import { joinValuesWidthSeparator } from "../utils/strings";
+import { joinValuesWithSeparator } from "../utils/strings";
 
 const date = new Date();
 
 const LocaleHeader = ({ city }) => {
-  const locale = joinValuesWidthSeparator(", ", city.city, city.country);
+  const locale = joinValuesWithSeparator(", ", city.city, city.country);
 
   return (
     <div className="weather-date-location">

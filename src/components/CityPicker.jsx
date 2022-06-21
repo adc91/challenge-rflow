@@ -1,6 +1,6 @@
 import React from "react";
 
-import { joinValuesWidthSeparator } from "../utils/strings";
+import { joinValuesWithSeparator } from "../utils/strings";
 
 const CityPicker = ({ cities, onChange, inProgress }) => {
   const onChangeEvent = (event) => {
@@ -21,7 +21,7 @@ const CityPicker = ({ cities, onChange, inProgress }) => {
 
 const Option = ({ cities }) => {
   return cities.map((value, key) => {
-    const label = joinValuesWidthSeparator(", ", value.city, value.country);
+    const label = joinValuesWithSeparator(", ", value.city, value.country);
 
     return (
       <option key={key} value={value.id}>
