@@ -13,15 +13,14 @@ Si lo desea, la aplicación puede ejecutarse en su entorno local. Para lograr es
 * Clone el repositorio: `git clone git@github.com:adc91/challenge-rflow.git`
 * Ingrese al directorio del proyecto creado en el paso anterior: `cd challenge-rflow/`
 * Instale todoas las dependencias necesarias para el proyecto: `yarn install` o `npm install`
-* Instale el servidor NPM para ejecutar el proyecto localmente: `npm install -g serve`
 * Compile el proyecto para su versión de producción: `yarn build` o `npm run build`
+* Instale el servidor NPM para ejecutar el proyecto localmente: `yarn global add serve` o `npm install -g serve`
 * Ejecute la versión optimizada en su entorno local: `yarn run serve` o `npm run serve`
 * Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador
 
 ## Scripts disponibles
 
 En el directorio del proyecto, ejecute:
-
 
 ### `yarn start` o `npm run start`
 
@@ -39,7 +38,11 @@ Empaqueta correctamente React en modo de producción y crea los archivos optimiz
 La compilación se minimiza y los nombres de archivo incluyen hashes.\
 Una vez completada la ejecución la aplicación estará lista para el ser implementada en producción.
 
-### `yarn test` o `npm run test`
+### `yarn test`
 
-Ejecuta los tests en modo interactivo
+Ejecuta los tests en modo interactivo.
 De forma predeterminada, ejecuta pruebas relacionadas con los archivos modificados desde el último commit.
+
+#### `yarn test -- --watchAll=false` o `npm run test -- --watchAll=false`
+
+Ejecuta todos los tests configurados sin el modo interactivo. Utilice esta opción para realizar ejecutar todos los tests.
