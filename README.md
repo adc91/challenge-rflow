@@ -1,21 +1,23 @@
 # REACT WEATHER CHALLENGE
 
-Este desafío implica la creación de una aplicación en React que consume la API de OpenWeather y muestre el clima actual y las predicciones para los próximos días. El usuario puede seleccionar una lista de ciudades ya predeterminadas o elegir su ubicación actual.
+Este desafío implica la creación de una aplicación en React que consuma la API de OpenWeather y muestre el clima actual y las predicciones meteorológicas para los próximos días.
 
-Se utiliza `create-react-app`, `bootstrap`, `@mdi-font` y `sass` como herramientas principales para cumplir con el desafío. La arquitectura de código utilizada está basada en las convenciones estándar de la industria.
+Esta aplicación permite al usuario seleccionar de una lista ya predeterminada la ciudad de su preferencia para obtener la información meteorológica más reciente. Adicionamente puede elegir su ubicación actual para una experiencia de usuario más personalizada.
 
-La aplicación se encuentra desplegada y disponible en [Github Pages](https://adc91.github.io/challenge-rflow)
+Se utilizan `create-react-app`, `bootstrap`, `@mdi-font` y `sass` como herramientas principales para cumplir con el desarrollo del desafío. La arquitectura de código utilizada está basada en las convenciones estándar de la industria.
+
+La aplicación se encuentra desplegada y disponible en [Github Pages](https://adc91.github.io/challenge-rflow) utilizando Travis CI como plataforma de CI/CD.
 
 ## Implementación local
 
-Si lo desea, la aplicación puede ejecutarse en su entorno local. Para lograr esto siga las siguientes instrucciones:
+Si lo desea, la aplicación puede ejecutarse en su entorno local. Para lograrlo siga las siguientes instrucciones:
 
 * Clone el repositorio: `git clone git@github.com:adc91/challenge-rflow.git`
 * Ingrese al directorio del proyecto creado en el paso anterior: `cd challenge-rflow/`
 * Instale todoas las dependencias necesarias para el proyecto: `yarn install` o `npm install`
 * Compile el proyecto para su versión de producción: `yarn build` o `npm run build`
-* Instale el servidor NPM para ejecutar el proyecto localmente: `yarn global add serve` o `npm install -g serve`
-* Ejecute la versión optimizada en su entorno local: `yarn run serve` o `npm run serve`
+* Instale el servidor NPM para ejecutar el proyecto en su entorno local: `yarn global add serve` o `npm install -g serve`
+* Levante el servidor NPM con la versión compilada y optimizada del proyecto: `yarn run serve` o `npm run serve`
 * Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador
 
 ## Scripts disponibles
