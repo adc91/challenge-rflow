@@ -38,7 +38,7 @@ Empaqueta correctamente React en modo de producción y crea los archivos optimiz
 La compilación se minimiza y los nombres de archivo incluyen hashes.\
 Una vez completada la ejecución la aplicación estará lista para el ser implementada en producción.
 
-### `yarn test`
+### `yarn test` o `npm run test`
 
 Ejecuta los tests en modo interactivo.
 De forma predeterminada, ejecuta pruebas relacionadas con los archivos modificados desde el último commit.
